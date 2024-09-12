@@ -1,0 +1,28 @@
+# This is an automation that detects when a 3D Print has completed in OctoPrint
+alias: Print Complete
+description: ""
+trigger:
+  - type: value
+    platform: device
+    device_id: xxx
+    entity_id: xxx
+    domain: sensor
+    above: 99.99
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 0
+    below: 101
+condition: []
+action:
+  - action: notify.xxx
+    metadata: {}
+    data:
+      message: Print has completed!
+      title: 3D Printer
+  - action: notify.persistent_notification
+    metadata: {}
+    data:
+      message: Print has completed!
+      title: 3D Printer
+mode: single
