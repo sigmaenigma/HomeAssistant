@@ -1,0 +1,28 @@
+# This automation sends an alert when the OctoPrint has sent a message back to HomeAssistant 
+# that a print has started
+alias: Print Started
+description: ""
+trigger:
+  - type: value
+    platform: device
+    device_id: xxx
+    entity_id: xxx
+    domain: sensor
+    above: 0
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 10
+    below: 100
+condition:
+  - type: is_on
+    condition: device
+    device_id: xxx
+    entity_id: xxx
+    domain: binary_sensor
+action:
+  - action: notify.xxx
+    metadata: {}
+    data:
+      message: Print has Started!
+mode: single
