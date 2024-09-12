@@ -1,2 +1,2 @@
-# HomeDashboard
-Creating a simple home dashboard to use as home page to keep track of all the devices that I can access on my network. Others might have the same issues. This is being solved using the Django framework.
+# HomeAssistant
+This is a place for me save some YAML configurations and other settings I use that I think would be useful for other folks to use in their homeassistant installation.
